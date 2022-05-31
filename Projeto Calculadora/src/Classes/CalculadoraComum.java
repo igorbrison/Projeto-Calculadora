@@ -1,26 +1,46 @@
 package Classes;
 
-public abstract class CalculadoraComum extends Calculadora {
+public class CalculadoraComum extends Calculadora {
+	
+	public CalculadoraComum() {
+		super();
+	}
 	@Override
-	public float soma(float x, float y) {
+	public double soma(double x, double y) {
+		// TODO Auto-generated method stub
 		return x + y;
 	}
 	@Override
-	public float subtracao(float x, float y) {
+	public double subtracao(double x, double y) {
+		// TODO Auto-generated method stub
 		return x - y;
 	}
 	@Override
-	public float multiplicacao(float x, float y) {
+	public double multiplicacao(double x, double y) {
+		// TODO Auto-generated method stub
 		return x * y;
 	}
 	@Override
-	public float divisao(float x, float y) {
+	public double divisao(double x, double y) {
+		// TODO Auto-generated method stub
 		try {
 			
 			return x / y;
 		} catch (ArithmeticException e) {
+			// TODO: handle exception
 			return 0;
 		}
 		
+	}
+	@Override
+	public boolean validaNumero(String n) {
+		
+		try {
+			int i = Integer.parseInt(n);
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		} 
 	}
 }

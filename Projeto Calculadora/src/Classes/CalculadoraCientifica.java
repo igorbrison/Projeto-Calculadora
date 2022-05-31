@@ -2,27 +2,33 @@ package Classes;
 
 public class CalculadoraCientifica extends CalculadoraComum {
 
-	public double expoente(float x, float y) {
+	public CalculadoraCientifica() {
+		super();
+	}
+	
+	public double expoente(double x, double y) {
 		return Math.pow(x, y);
 	}
 
-	public double raiz(float x) {
+	public double raiz(double x) {
+		if(x < 0) return 0;
 		return Math.sqrt(x);
 	}
 
-	public double sin(float x) {
+	public double sin(double x) {
 		return Math.sin(x);
 	}
 
-	public double cos(float x) {
+	public double cos(double x) {
 		return Math.cos(x);
 	}
 
-	public double tan(float x) {
+	public double tan(double x) {
 		return Math.tan(x);
 	}
 
-	public double log(float x) {
+	public double log(double x) {
+		if(x == 0) return 0;
 		return Math.log(x);
 	}
 }
